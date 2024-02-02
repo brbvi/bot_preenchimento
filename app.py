@@ -8,11 +8,11 @@ sheet_produtos = workbook['Produtos']
 # Copiar informações de um campo e colar no seu campo correspondente
 for linha in sheet_produtos.iter_rows(min_row=2):
     # PRIMEIRA PÁGINA
-    nome_produto = linha[0].value
+    nome_produto = linha[0].valueExtra
     pyperclip.copy(nome_produto)
     pyautogui.click(1110,338, duration=0.7)
     pyautogui.hotkey('ctrl','v')
-    
+  
     descricao = linha[1].value
     pyperclip.copy(descricao)
     pyautogui.click(1116,425, duration=0.7)
